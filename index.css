@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: olivedrab;
+    font-family: 'poppins', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: greenyellow;
+    margin-top: 5%;
+}
+
+h1:hover {
+    text-shadow: 2px 2px 5px #0f0;
+}
+
+.container {
+    padding: 20px;
+    width: 350px;
+    background: rgba(255, 255, 0, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.container:hover {
+    border: 5px solid yellowgreen;
+    border-radius: 22px;
+}
+
+.add-task-box input {
+    all: unset;
+    height: 45px;
+    width: 230px;
+    background: #1E1E1E;
+    padding-left: 20px;
+    border-radius: 22px;
+    color: white;
+    transition: all .2s;
+}
+
+input:focus {
+    outline: 3px solid #bd83b8;
+}
+
+input::placeholder {
+    color: #bd83b8;
+    transition: opacity .3s;
+}
+
+.add-btn {
+    all: unset;
+    height: 45px;
+    width: 45px;
+    color: #0D0D0D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background: #bd83b8;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    color: white;
+    box-shadow: 5px 5px 0px #fff;
+}
+
+.container .all-tasks {
+    max-height: 350px;
+    margin-top: 20px;
+}
+
+.clipboard-icon {
+    font-size: 85px;
+    color: #bd83b8;
+    text-align: center;
+    margin-top: -7px;
+}
+
+.no-task-message {
+    color: #bd83b8;
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    margin-top: -13px;
+    text-decoration-line: underline;
+}
+
+.container .all-tasks .task {
+    width: 100%;
+    background: #1E1E1E;
+    border: .6px solid #E6D4B6;
+    border-radius: 7px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-top: 8px;
+}
+
+.container .all-tasks .task input {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    border: 2px solid white;
+    margin-left: 13px;
+    cursor: pointer;
+}
+
+.container .all-tasks .task input:checked {
+    background: greenyellow;
+}
+
+.container .all-tasks .task .userTask {
+    margin-left: 8px;
+    color: #E6D4B6;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.container .all-tasks .task .userTask.checked {
+    text-decoration: line-through;
+    text-decoration-color: yellow;
+}
+
+.container .all-tasks .task .btns {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 16px;
+}
+
+.dlt-btn {
+    all: unset;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 200;
+    color: #0D0D0D;
+    background: #bd83b8;
+    border-radius: 22px;
+}
+
+.dlt-btn:hover {
+    box-shadow: 5px 5px 0px #fff;
+    color: #fff;
+}
+
+.others {
+    margin-top: 23px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border: 3px solid yellowgreen;
+    border-radius: 22px;
+    padding: 8px;
+}
+
+.no-of-tasks {
+    color: #bd83b8;
+    font-size: 14px;
+    margin-left: 12px;
+    position: relative;
+    top: 4px;
+    background-color: #0D0D0D;
+    border-radius: 10px;
+}
+
+.clear-all-btn {
+    all: unset;
+    height: 30px;
+    width: 80px;
+    background: #bd83b8;
+    color: #0D0D0D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    font-size: 12px;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    margin-top: -23px;
+    font-weight: 500;
+}
+
+.clear-all-btn:hover {
+    box-shadow: 5px 5px 0px #fff;
+    color: #fff;
+}
+
+::selection {
+    background: rgb(100, 149, 237, 0.8);
+    color: white;
+}
